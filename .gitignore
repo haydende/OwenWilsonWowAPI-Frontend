@@ -37,6 +37,14 @@ yarn-error.log
 testem.log
 /typings
 
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
 # System files
 .DS_Store
 Thumbs.db
