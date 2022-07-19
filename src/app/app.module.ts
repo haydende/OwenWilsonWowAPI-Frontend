@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TempWowComponent } from './temp-wow/temp-wow.component';
+import { RandomWowComponent } from './random-wow/random-wow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TempWowComponent
+    RandomWowComponent
   ],
   imports: [
     BrowserModule,

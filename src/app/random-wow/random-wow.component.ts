@@ -4,10 +4,10 @@ import { WowHttpService } from '../wow.http.service';
 
 @Component({
   selector: 'random-wow',
-  templateUrl: './temp-wow.component.html',
-  styleUrls: ['./temp-wow.component.css']
+  templateUrl: './random-wow.component.html',
+  styleUrls: ['./random-wow.component.css']
 })
-export class TempWowComponent implements OnInit {
+export class RandomWowComponent implements OnInit {
 
   public randomWow!: Wow;
 
