@@ -4,19 +4,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RandomWowComponent } from './random-wow/random-wow.component';
+import { WowListComponent } from './component/wow-list/wow-list/wow-list.component';
+import { WowComponent } from './component/wow/wow.component';
+import { WowHttpService } from './service/wow.http.service';
+import { WowSearchComponent } from './component/wow-search/wow-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RandomWowComponent
+    WowComponent,
+    WowListComponent,
+    WowSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    WowHttpService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

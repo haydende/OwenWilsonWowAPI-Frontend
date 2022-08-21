@@ -1,21 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Wow } from './wow';
+import { Wow } from '../model/wow';
 import { Observable } from 'rxjs';
-@Injectable({
-  providedIn: 'root'
-})
+
+@Injectable()
 export class WowHttpService {
 
   private readonly urlBase: string = "https://owen-wilson-wow-api.herokuapp.com/wows"
 
-  private response: Wow[] = [];
-
   constructor(private httpClient: HttpClient) { }
 
   public getRandom(): Observable<Wow[]> {
-    var data: Wow;
-    return this.httpClient.get<Wow[]>(`${this.urlBase}/random`);
+    return this.httpClient.get<Wow[]>(`${this.urlBase}/random?results=5`);
   }
 
 }

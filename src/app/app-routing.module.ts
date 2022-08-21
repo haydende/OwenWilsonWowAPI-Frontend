@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RandomWowComponent } from './random-wow/random-wow.component';
+import { WowSearchComponent } from './component/wow-search/wow-search.component';
 
 const routes: Routes = [
-  { path: 'random', component: RandomWowComponent }
+  { path: 'search', component: WowSearchComponent }
 ];
 
 @NgModule({
