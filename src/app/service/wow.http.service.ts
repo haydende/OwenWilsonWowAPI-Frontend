@@ -10,8 +10,62 @@ export class WowHttpService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getRandom(): Observable<Wow[]> {
-    return this.httpClient.get<Wow[]>(`${this.urlBase}/random?results=5`);
+  public getRandom(
+    results: number = 5,
+    year?: number, 
+    movie?: string, 
+    director?: string
+  ): Observable<Wow[]> {
+    let requestUrl = `${this.urlBase}/random`;
+    let isFirstParam = true;
+
+    if (results != null) {
+      requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
+      console.log(requestUrl);
+      requestUrl = `${requestUrl}results=${results}`;
+      console.log(requestUrl);
+      isFirstParam = false;
+    }
+    
+    if (year != null) {
+      requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
+      console.log(requestUrl);
+      requestUrl = `${requestUrl}year=${year}`;
+      console.log(requestUrl);
+      isFirstParam = false;
+    }
+
+    if (movie != "") {
+      requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
+      console.log(requestUrl);
+      requestUrl = `${requestUrl}movie=${movie}`;
+      console.log(requestUrl);
+      isFirstParam = false;
+    }
+
+    if (director != "") {
+      requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
+      console.log(requestUrl);
+      requestUrl = `${requestUrl}director=${director}`;
+      console.log(requestUrl);
+      isFirstParam = false;
+    }
+
+    // let requestUrl = `${this.urlBase}/random?results=${count}&year=${year}&movie=${movie}&director=${director}`
+    console.log(`Sending request to ${requestUrl}`);
+    return this.httpClient.get<Wow[]>(requestUrl);
+  }
+
+  public getMovieNames(): Observable<string[]>{
+    let requestUrl = `${this.urlBase}/movies`;
+    console.log(`Sending request to ${requestUrl}`);
+    return this.httpClient.get<string[]>(requestUrl);
+  }
+
+  public getDirectorNames(): Observable<string[]> {
+    let requestUrl = `${this.urlBase}/directors`;
+    console.log(`Sending request to ${requestUrl}`);
+    return this.httpClient.get<string[]>(requestUrl);
   }
 
 }

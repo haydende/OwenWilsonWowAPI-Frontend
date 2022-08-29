@@ -1,27 +1,16 @@
-# HttpRequests
+# Owen Wilson Wow API Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+This is an [Angular CLI](https://github.com/angular/angular-cli) project I have created to relearn some skills. This is entirely a front-end for the API provided by https://owen-wilson-wow-api.herokuapp.com/ (which can also be found on [GitHub](https://github.com/amamenko/owen-wilson-wow-api)).
 
-## Development server
+## Existing Functionality
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+At present, this application can only request for 'random' wows and does so with a filter consisting of 4 options:
 
-## Code scaffolding
+* Results - the number of results to grab
+* Year - the year of movie release to filter for (an empty value will negate this part of the filter)
+* Movie name - the name of the movie to grab entries for (this is a dropdown so you don't have to invoke your extensive knowledge of Owen Wilson's career :) )
+* Director name - the name of the director to grab entries for (this is also a dropdown)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How to use the application
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+As usual with Angular projects, you are able to use `ng serve` to deploy the application locally. You will find the functionality described above under `/search`

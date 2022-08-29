@@ -1,21 +1,26 @@
 <div id="wow-details">
-    <p>Movie Title: {{wow.movie}}</p>
-    <p>Release Year: {{wow.year}}</p>
-    <p>Release Date: {{wow.release_date}}</p>
-    <p>Director: {{wow.director}}</p>
-    <p>Owen Wilson's Character: {{wow.character}}</p>
-    <p>Movie Duration: {{wow.movie_duration}}</p>
-    <p>Timestamp for the Wow: {{wow.timestamp}}</p>
-    <p>Full line that the Wow appears in: {{wow.full_line}}</p>
-    <p># of Wows at this point in the movie: {{wow.current_wow_in_movie}}</p>
-    <p># of Wows in the movie: {{wow.total_wows_in_movie}}</p>
-    <p>Poster link: {{wow.poster}}</p>
-    <div>
-        <p>Video Options:</p>
-        <p>1080p: {{wow.video['1080p']}}</p>
-        <p>720p: {{wow.video['720p']}}</p>
-        <p>480p: {{wow.video['480p']}}</p>
-        <p>360p: {{wow.video['360p']}}</p>
+    <div id="details-column">
+        <div id="title-row">
+            <h1>{{wow.movie}} - {{wow.director}} - {{wow.year}} (Wow {{wow.current_wow_in_movie}}/{{wow.total_wows_in_movie}})</h1>
+        </div>
+        <div id="other-details">
+            <p><strong>Release Date</strong>: {{wow.release_date}}</p>
+            <p><strong>Owen Wilson's Character</strong>: {{wow.character}}</p>
+            <p><strong>Movie Duration</strong>: {{wow.movie_duration}}</p>
+            <p><strong>Timestamp</strong>: {{wow.timestamp}}</p>
+            <p><strong>Full line</strong>: {{wow.full_line}}</p>
+            <p>Audio link: {{wow.audio}}</p>        
+        </div>
+        <div id="video">
+            <!-- <video id="video" controls>
+                <source src="{{wow.video['1080p']}}" type="video/mp4">
+                <source src="{{wow.video['720p']}}" type="video/mp4">
+                <source src="{{wow.video['480p']}}" type="video/mp4">
+                <source src="{{wow.video['360p']}}" type="video/mp4">
+            </video>         -->
+        </div>
     </div>
-    <p>Audio link: {{wow.audio}}</p>
+    <div id="poster-column">
+        <img id="poster-image" src="{{wow.poster}}" alt="Poster for {{wow.movie}}">
+    </div>
 </div>

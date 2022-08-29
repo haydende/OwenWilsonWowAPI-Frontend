@@ -8,6 +8,7 @@ import { WowListComponent } from './component/wow-list/wow-list/wow-list.compone
 import { WowComponent } from './component/wow/wow.component';
 import { WowHttpService } from './service/wow.http.service';
 import { WowSearchComponent } from './component/wow-search/wow-search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { WowSearchComponent } from './component/wow-search/wow-search.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     WowHttpService
