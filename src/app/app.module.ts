@@ -7,15 +7,17 @@ import { AppComponent } from './app.component';
 import { WowListComponent } from './component/wow-list/wow-list/wow-list.component';
 import { WowComponent } from './component/wow/wow.component';
 import { WowHttpService } from './service/wow.http.service';
-import { WowSearchComponent } from './component/wow-search/wow-search.component';
+import { RandomWowSearchComponent } from './component/random-wow-search/random-wow-search.component';
 import { FormsModule } from '@angular/forms';
+import { OrderedWowSearchComponent } from './component/ordered-wow-search/ordered-wow-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WowComponent,
     WowListComponent,
-    WowSearchComponent
+    RandomWowSearchComponent,
+    OrderedWowSearchComponent
   ],
   imports: [
     BrowserModule,

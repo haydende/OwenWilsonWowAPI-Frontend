@@ -3,11 +3,11 @@ import { Wow } from 'src/app/model/wow';
 import { WowHttpService } from 'src/app/service/wow.http.service';
 
 @Component({
-  selector: 'wow-search',
-  templateUrl: './wow-search.component.html',
-  styleUrls: ['./wow-search.component.css']
+  selector: 'random-wow-search',
+  templateUrl: './random-wow-search.component.html',
+  styleUrls: ['./random-wow-search.component.css']
 })
-export class WowSearchComponent implements OnInit {
+export class RandomWowSearchComponent implements OnInit {
 
   wows: Wow[] = [];
   movieNames: string[] = ["Meet the Parents"];

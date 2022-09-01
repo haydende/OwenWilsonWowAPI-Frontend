@@ -1,0 +1,36 @@
+<div id="search">
+    <div id="search-criteria">
+        <div id="results" class="criteria-field">
+            <label for="list-results">Results to get:</label>
+            <input type="number" id="list-results" [(ngModel)]="this.results">
+        </div>
+
+        <div id="year" class="criteria-field">
+            <label for="year">Year of movie release (leave empty to not use):</label>
+            <input type="text" id="year" [(ngModel)]="this.year">
+        </div>
+
+        <div id="movie-name" class="criteria-field">
+            <label for="movie-name">Name of movie:</label>
+            <select name="movie-name" id="movie-name" [(ngModel)]="this.movieName">
+                <option value="">N/A</option>
+                <option *ngFor="let movieName of this.movieNames" value="{{movieName}}">{{movieName}}</option>
+            </select>
+        </div>
+
+        <div id="director-name" class="criteria-field">
+            <label for="director-name">Name of director:</label>
+            <select name="director-name" id="director-name" [(ngModel)]="this.directorName">
+                <option value="">N/A</option>
+                <option *ngFor="let directorName of this.directorNames" value="{{directorName}}">
+                    {{directorName}}
+                </option>
+            </select>            
+        </div>
+
+        <button (click)="submit();" class="submit-button">Submit</button>
+    </div>
+    <div id="search-results">
+        <wow-list [wows]="wows"></wow-list>
+    </div>
+</div>
