@@ -51,9 +51,22 @@ export class WowHttpService {
       isFirstParam = false;
     }
 
-    // let requestUrl = `${this.urlBase}/random?results=${count}&year=${year}&movie=${movie}&director=${director}`
     console.log(`Sending request to ${requestUrl}`);
     return this.httpClient.get<Wow[]>(requestUrl);
+  }
+
+  public getOrdered(startIndex: number, endIndex?: number): Observable<Wow[]> {
+    let requestUrl = `${this.urlBase}/ordered/${startIndex}`;
+
+    if (null != endIndex && endIndex >= startIndex) {
+      requestUrl = `${requestUrl}-${endIndex}`;
+    } else {
+      requestUrl = `${requestUrl}-${startIndex}`; // force API to response with array
+    }
+
+    console.log(`Sending request to ${requestUrl}`);
+    return this.httpClient.get<Wow[]>(requestUrl);
+
   }
 
   public getMovieNames(): Observable<string[]>{

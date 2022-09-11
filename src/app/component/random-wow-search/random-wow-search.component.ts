@@ -5,13 +5,13 @@ import { WowHttpService } from 'src/app/service/wow.http.service';
 @Component({
   selector: 'random-wow-search',
   templateUrl: './random-wow-search.component.html',
-  styleUrls: ['./random-wow-search.component.css']
+  styleUrls: ['../search.component.css']
 })
 export class RandomWowSearchComponent implements OnInit {
 
   wows: Wow[] = [];
   movieNames: string[] = ["Meet the Parents"];
-  directorNames: string[] = ["Betty Thomas"];
+  directorNames: string[] = ["Jay Roach"];
 
   @Input() public results = 5;
   @Input() public year = 2000;
