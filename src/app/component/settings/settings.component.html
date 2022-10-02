@@ -1,0 +1,9 @@
+<div id="settings">
+    <div id="dark-mode-wrapper">
+        <label for="dark-mode">Dark Mode:</label>
+        <input id="dark-mode" type="checkbox" [(ngModel)]="this.darkMode">    
+    </div>
+    <div id="save-button-wrapper">
+        <button id="save-button" (click)="saveSettings()">Save Changes</button>
+    </div>
+</div>

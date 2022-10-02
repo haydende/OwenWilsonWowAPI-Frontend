@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'owen-wilson-wow-frontend';
+  darkMode = false;
+
+  constructor() {
+    this.darkMode = localStorage.getItem('darkMode') == 'true';
+    console.log(`Dark Mode? ${this.darkMode}`)
+  }
 }
