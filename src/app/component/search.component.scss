@@ -34,11 +34,11 @@ div#submit {
     padding: 10px 10px 12px 12px;
     border: none;
     border-radius: 8px;
-}
 
-.submit-button:hover {
-    transition: 300ms;
-    background-color: rgba(75, 75, 75, 0.3);
+    &:hover {
+        transition: 300ms;
+        background-color: rgba(75, 75, 75, 0.3);
+    }
 }
 
 .criteria-field {
@@ -54,11 +54,11 @@ div#submit {
     border-radius: 5px;
     padding: 5px;
     margin-top: 5px;
-}
 
-.criteria-input:hover {
-    transition: 500ms;
-    box-shadow: -1px -1px 30px 1px rgba(0, 0, 0, 0.1);
+    &:hover {
+        transition: 500ms;
+        box-shadow: -1px -1px 30px 1px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .always-max-width {

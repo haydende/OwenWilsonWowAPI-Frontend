@@ -6,7 +6,7 @@ import { RandomWowSearchComponent } from '../random-wow-search/random-wow-search
 @Component({
   selector: 'ordered-wow-search',
   templateUrl: './ordered-wow-search.component.html',
-  styleUrls: ['../../app.component.css', '../search.component.css', './ordered-wow-search.component.css']
+  styleUrls: ['../../app.component.scss', '../search.component.scss', './ordered-wow-search.component.scss']
 })
 export class OrderedWowSearchComponent implements OnInit {
 

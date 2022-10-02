@@ -5,7 +5,7 @@ import { WowHttpService } from 'src/app/service/wow.http.service';
 @Component({
   selector: 'random-wow-search',
   templateUrl: './random-wow-search.component.html',
-  styleUrls: ['../../app.component.css', '../search.component.css']
+  styleUrls: ['../../app.component.scss', '../search.component.scss']
 })
 export class RandomWowSearchComponent implements OnInit {
 
