@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { OrderedWowSearchComponent } from './component/ordered-wow-search/ordered-wow-search.component';
 import { NavigationComponent } from './component/navigation/navigation.component';
 import { SettingsComponent } from './component/settings/settings.component';
+import { ThemeService } from './service/theme.service';
+import { SettingLocalStorageService } from './service/setting-storage.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { SettingsComponent } from './component/settings/settings.component';
     FormsModule
   ],
   providers: [
-    WowHttpService
+    WowHttpService,
+    SettingLocalStorageService,
+    ThemeService
   ],
   bootstrap: [AppComponent]
 })

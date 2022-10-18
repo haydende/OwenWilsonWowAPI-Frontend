@@ -1,4 +1,4 @@
-export enum ColourMode {
+export enum Theme {
 
     LIGHT = "light",
 

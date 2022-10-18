@@ -1,6 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
+$bgColour_light: white;
+$bgColour_dark: black;
+
+$textColour_light: black;
+$textColour_dark: white;
+
+$borderColour_light: black;
+$borderColour_dark: white;
+
+
+@mixin lighten() {
+    --bgColor: white;
+    --textColor: black;
+    --borderColor: black;
+    --btnBgColourActive: rgba(25,25,25,0.3);
+}
+
+@mixin darken() {
+    --bgColor: black;
+    --textColor: white;
+    --borderColor: white;    
+    --btnBgColourActive: rgba(230,230,230,0.3);
+}
+
 button:active {
     transition: 100ms;
-    background-color: rgba(25,25,25,0.3) !important;
+    background-color: var(--btnBgColourActive);
+}
+
+body.dark {
+    @include darken();
+}
+
+body.light {
+    @include lighten();
 }

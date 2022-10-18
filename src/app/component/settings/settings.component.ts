@@ -1,21 +1,26 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Theme } from 'src/app/model/theme.model';
+import { ThemeService } from 'src/app/service/theme.service';
 
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss']
 })
-export class SettingsComponent implements OnInit {
+export class SettingsComponent {
 
-  @Input() darkMode: boolean = false;
+  @Input() currentTheme: Theme = Theme.DARK;
 
-  constructor() { }
+  themes = Object.keys(Theme);
 
-  ngOnInit(): void {
+  constructor(public themeService: ThemeService) {
+      this.themeService.themeChanged$.subscribe((theme: Theme) => {
+          this.currentTheme = theme;
+      })
   }
 
   saveSettings() {
-    localStorage.setItem('darkMode', this.darkMode.toString());
+      this.themeService.applyTheme(this.currentTheme);
   }
 
 }
