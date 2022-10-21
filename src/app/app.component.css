@@ -1,8 +1,0 @@
-body {
-    color-scheme: dark;
-}
-
-button:active {
-    transition: 100ms;
-    background-color: rgba(25,25,25,0.3) !important;
-}

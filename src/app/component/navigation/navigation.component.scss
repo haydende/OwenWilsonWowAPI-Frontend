@@ -1,0 +1,18 @@
+.nav-button {
+    padding: 15px;
+    border-style: none;
+    margin-bottom: 10px;
+    transition: 500ms;
+    background-color: var(--backgroundColour);
+    color: var(--textColour);
+
+    &:hover {
+        transition: 300ms;
+        background-color: var(--btnBgColourActive);
+    }
+}
+
+.current-tab {
+    transition: 300ms;
+    border-bottom: var(--currentTabHighlight);
+}

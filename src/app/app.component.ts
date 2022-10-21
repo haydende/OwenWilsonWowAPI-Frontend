@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
+import { ThemeService } from './service/theme.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'owen-wilson-wow-frontend';
-  darkMode = false;
 
-  constructor() {
-    this.darkMode = localStorage.getItem('darkMode') == 'true';
-    console.log(`Dark Mode? ${this.darkMode}`)
+  constructor(private themeService: ThemeService) {
+    // Theme being applied is dependent on themeService being initialised
   }
 }
