@@ -1,27 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
-$bgColour_light: white;
-$bgColour_dark: black;
-
-$textColour_light: black;
-$textColour_dark: white;
-
-$borderColour_light: black;
-$borderColour_dark: white;
-
-
 @mixin lighten() {
-    --bgColor: white;
-    --textColor: black;
-    --borderColor: black;
+    --backgroundColour: rgb(230,230,230);
+    --textColour: black;
+    --borderColour: black;
     --btnBgColourActive: rgba(25,25,25,0.3);
+    --currentTabHighlight: 1px solid black;
+    --shadowColour: rgba(0,0,0,0.2);
+
+    --inputBackgroundColour: rgb(220,220,220);
+    --inputTextColour: rgb(0,0,0);
+    --inputHighlightShadow: -1px -1px 30px 1px rgba(0,0,0,0.1);
 }
 
 @mixin darken() {
-    --bgColor: black;
-    --textColor: white;
-    --borderColor: white;    
+    --backgroundColour: rgb(30, 30, 30);
+    --textColour: rgb(230,230,230);
+    --borderColour: white;    
     --btnBgColourActive: rgba(230,230,230,0.3);
+    --currentTabHighlight: 1px solid white;
+    --shadowColour: rgba(0,0,0,0.2);
+
+    --inputBackgroundColour: rgb(50,50,50);
+    --inputTextColour: rgb(230,230,230);
+    --inputHighlightShadow: 1px -1px 15px 1px rgba(255,255,255,0.1);
 }
 
 button:active {
@@ -31,8 +33,10 @@ button:active {
 
 body.dark {
     @include darken();
+    background-color: var(--backgroundColour);
 }
 
 body.light {
     @include lighten();
+    background-color: var(--backgroundColour);
 }

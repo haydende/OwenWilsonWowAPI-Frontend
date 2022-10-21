@@ -1,6 +1,8 @@
 
 div#search {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 0px var(--shadowColour);
+    background-color: var(--backgroundColour);
+    color: var(--textColour);
 
     display: flex;
     flex-direction: column;
@@ -23,13 +25,15 @@ div#search-results {
 }
 
 div#submit {
+    
     margin-bottom: 1%;
-
+    
     display: flex;
     justify-content: center;
 }
 
 .submit-button {
+    color: var(--textColour);
     background-color: rgba(125, 125, 125, 0.3);
     padding: 10px 10px 12px 12px;
     border: none;
@@ -50,14 +54,16 @@ div#submit {
 }
 
 .criteria-input {
-    background-color: white;
+    color: var(--inputTextColour);
+    background-color: var(--inputBackgroundColour);
     border-radius: 5px;
     padding: 5px;
     margin-top: 5px;
+    transition: 500ms;
 
     &:hover {
         transition: 500ms;
-        box-shadow: -1px -1px 30px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--inputHighlightShadow);
     }
 }
 
