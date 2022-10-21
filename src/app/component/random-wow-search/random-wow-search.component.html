@@ -2,17 +2,17 @@
     <div id="search-criteria">
         <div id="results" class="criteria-field">
             <label for="list-results" class="always-max-width">Results to get:</label>
-            <input type="number" id="list-results" [(ngModel)]="this.results" class="criteria-input">
+            <input type="number" id="list-results" [(ngModel)]="this.results" class="criteria-input no-border rounded-corners">
         </div>
 
         <div id="year" class="criteria-field">
             <label for="year" class="always-max-width">Year of movie release:</label>
-            <input type="text" id="year" class="always-max-width" [(ngModel)]="this.year" class="criteria-input">
+            <input type="text" id="year" class="always-max-width" [(ngModel)]="this.year" class="criteria-input no-border rounded-corners">
         </div>
 
         <div id="movie-name" class="criteria-field">
             <label for="movie-name" class="always-max-width">Name of movie:</label>
-            <select name="movie-name" id="movie-name" [(ngModel)]="this.movieName" class="criteria-input">
+            <select name="movie-name" id="movie-name" [(ngModel)]="this.movieName" class="criteria-input no-border rounded-corners">
                 <option value="">N/A</option>
                 <option *ngFor="let movieName of this.movieNames" value="{{movieName}}">{{movieName}}</option>
             </select>
@@ -20,7 +20,7 @@
 
         <div id="director-name" class="criteria-field">
             <label for="director-name" class="always-max-width">Name of director:</label>
-            <select name="director-name" id="director-name" [(ngModel)]="this.directorName" class="criteria-input">
+            <select name="director-name" id="director-name" [(ngModel)]="this.directorName" class="criteria-input no-border rounded-corners">
                 <option value="">N/A</option>
                 <option *ngFor="let directorName of this.directorNames" value="{{directorName}}">
                     {{directorName}}

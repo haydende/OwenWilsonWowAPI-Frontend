@@ -2,13 +2,29 @@
     <div id="search-criteria">
         <div id="start-index-wrapper" class="criteria-field">
             <label for="start-index">Starting Index:</label>
-            <input type="number" id="start-index" [(ngModel)]="this.startIndex" (change)="setEndIndex()"> 
+            <input 
+              type="number"
+              id="start-index"
+              class="criteria-input no-border rounded-corners"
+              [(ngModel)]="this.startIndex" 
+              (change)="setEndIndex()"
+            > 
         </div>
-        <div id="end-index-wrapper" class="criteria-field">
+        <div 
+          id="end-index-wrapper" 
+          class="criteria-field"
+        >
             <label for="end-index">Ending Index:</label>
             <div id="end-index">
-                <input type="number" id="end-index" [(ngModel)]="this.endIndex" [disabled]="!this.useEndIndex" [min]="this.startIndex">
-                <input type="checkbox" id="use-end-index" [(ngModel)]="this.useEndIndex"> 
+                <input 
+                  type="number" 
+                  id="end-index"
+                  class="criteria-input no-border rounded-corners" 
+                  [(ngModel)]="this.endIndex" 
+                  [disabled]="!this.useEndIndex" 
+                  [min]="this.startIndex"
+                >
+                <input type="checkbox" id="use-end-index" class="no-border" [(ngModel)]="this.useEndIndex"> 
             </div>
         </div>
     </div>

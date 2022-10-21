@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @mixin lighten() {
-    --backgroundColour: rgb(230,230,230);
+    --backgroundColour: rgb(240,240,240);
     --textColour: black;
     --borderColour: black;
     --btnBgColourActive: rgba(25,25,25,0.3);
@@ -23,12 +23,7 @@
 
     --inputBackgroundColour: rgb(50,50,50);
     --inputTextColour: rgb(230,230,230);
-    --inputHighlightShadow: 1px -1px 15px 1px rgba(255,255,255,0.1);
-}
-
-button:active {
-    transition: 100ms;
-    background-color: var(--btnBgColourActive);
+    --inputHighlightShadow: -1px -1px 5px 1px rgba(255,255,255,0.1);
 }
 
 body.dark {
@@ -39,4 +34,17 @@ body.dark {
 body.light {
     @include lighten();
     background-color: var(--backgroundColour);
+}
+
+button:active {
+    transition: 100ms;
+    background-color: var(--btnBgColourActive);
+}
+
+.no-border {
+    border-style: none;
+}
+
+.rounded-corners {
+    border-radius: 5px;
 }
