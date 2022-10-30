@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'http-requests'`, () => {
+  it(`should have as title 'owen-wilson-wow-api-frontend'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('http-requests');
+    expect(app.title).toEqual('owen-wilson-wow-api-frontend');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('http-requests app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('owen-wilson-wow-api-frontend app is running!');
   });
 });

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "http-requests": {
+    "owen-wilson-wow-api-frontend": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/http-requests",
+            "outputPath": "dist/owen-wilson-wow-api-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "http-requests:build:production"
+              "browserTarget": "owen-wilson-wow-api-frontend:build:production"
             },
             "development": {
-              "browserTarget": "http-requests:build:development"
+              "browserTarget": "owen-wilson-wow-api-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "http-requests:build"
+            "browserTarget": "owen-wilson-wow-api-frontend:build"
           }
         },
         "test": {
