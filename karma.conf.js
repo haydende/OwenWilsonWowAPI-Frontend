@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/http-requests'),
+      dir: require('path').join(__dirname, './coverage/owen-wilson-wow-api-frontend'),
       subdir: '.',
       reporters: [
         { type: 'html' },
