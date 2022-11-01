@@ -13,7 +13,7 @@ export class NavigationComponent implements OnInit {
   }
 
   isCurrentPath(pathname: string): boolean {
-      return location.pathname === pathname;  
+      return location.pathname.endsWith(pathname);
   }
 
 }
