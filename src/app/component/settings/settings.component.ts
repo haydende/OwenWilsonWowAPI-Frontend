@@ -11,7 +11,7 @@ export class SettingsComponent {
 
   @Input() currentTheme: Theme = Theme.DARK;
 
-  themes = Object.keys(Theme);
+  themes = Object.values(Theme);
 
   constructor(public themeService: ThemeService) {
       this.themeService.themeChanged$.subscribe((theme: Theme) => {

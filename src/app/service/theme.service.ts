@@ -25,15 +25,18 @@ export class ThemeService {
     private updateCurrentTheme(theme: Theme) {
         this.currentTheme = theme;
         this.themeChangedSubject.next(this.currentTheme);
+        console.log(`Theme to be applied: [${this.currentTheme}]`);
         this.settingStorage.saveSetting(Setting.THEME, this.currentTheme);
     }
 
     private init() {
         const deviceTheme = window.matchMedia("(prefers-color-scheme: dark)");
-        let initTheme = <Theme> this.settingStorage.getSetting(Setting.THEME);
+        let initTheme: Theme = this.settingStorage.getSetting(Setting.THEME) as Theme;
+        console.log(`Contents of theme setting: [${initTheme}]`);
         if (!initTheme) {
             deviceTheme.matches ? (initTheme = Theme.DARK) : (initTheme = Theme.LIGHT);
         }
+        console.log(`Initialising with theme [${initTheme}]`);
         this.updateCurrentTheme(initTheme);
         this.document.body.classList.add(this.currentTheme.toLowerCase());
     }
