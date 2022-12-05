@@ -16,7 +16,7 @@
 @mixin darken() {
     --backgroundColour: rgb(30, 30, 30);
     --textColour: rgb(230,230,230);
-    --borderColour: white;    
+    --borderColour: white;
     --btnBgColourActive: rgba(230,230,230,0.3);
     --currentTabHighlight: 1px solid white;
     --shadowColour: rgba(0,0,0,0.2);
@@ -47,4 +47,8 @@ button:active {
 
 .rounded-corners {
     border-radius: 5px;
+}
+
+.align-center {
+    align-items: center;
 }

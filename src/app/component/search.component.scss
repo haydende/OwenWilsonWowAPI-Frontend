@@ -6,6 +6,7 @@ div#search {
 
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 
     margin-bottom: 1%;
 }
@@ -15,7 +16,7 @@ div#search-criteria {
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
 div#search-results {
@@ -25,9 +26,9 @@ div#search-results {
 }
 
 div#submit {
-    
+
     margin-bottom: 1%;
-    
+
     display: flex;
     justify-content: center;
 }
@@ -49,8 +50,7 @@ div#submit {
     display: flex;
     flex-direction: column;
 
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 10px;
 }
 
 .criteria-input {
