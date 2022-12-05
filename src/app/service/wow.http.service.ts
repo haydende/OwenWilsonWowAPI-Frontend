@@ -6,14 +6,14 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class WowHttpService {
 
-  private readonly urlBase: string = "https://owen-wilson-wow-api.herokuapp.com/wows"
+  private readonly urlBase: string = "https://owen-wilson-wow-api.onrender.com/wows"
 
   constructor(private httpClient: HttpClient) { }
 
   public getRandom(
     results: number = 5,
-    year?: number, 
-    movie?: string, 
+    year?: number,
+    movie?: string,
     director?: string
   ): Observable<Wow[]> {
     let requestUrl = `${this.urlBase}/random`;
@@ -26,7 +26,7 @@ export class WowHttpService {
       console.log(requestUrl);
       isFirstParam = false;
     }
-    
+
     if (year != null) {
       requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
       console.log(requestUrl);
