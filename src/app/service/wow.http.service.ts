@@ -61,7 +61,7 @@ export class WowHttpService {
     if (null != endIndex && endIndex >= startIndex) {
       requestUrl = `${requestUrl}-${endIndex}`;
     } else {
-      requestUrl = `${requestUrl}-${startIndex}`; // force API to response with array
+      requestUrl = `${requestUrl}-${startIndex}`; // force API to respond with array
     }
 
     console.log(`Sending request to ${requestUrl}`);

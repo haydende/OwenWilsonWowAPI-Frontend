@@ -1,5 +1,5 @@
-<div id="search">
-    <div id="search-criteria">
+<div id="search" class="align-center">
+    <div id="search-criteria" class="align-center">
         <div id="results" class="criteria-field">
             <label for="list-results" class="always-max-width">Results to get:</label>
             <input type="number" id="list-results" [(ngModel)]="this.results" class="criteria-input no-border rounded-corners">
@@ -25,7 +25,7 @@
                 <option *ngFor="let directorName of this.directorNames" value="{{directorName}}">
                     {{directorName}}
                 </option>
-            </select>            
+            </select>
         </div>
 
     </div>
