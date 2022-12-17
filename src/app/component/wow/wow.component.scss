@@ -1,6 +1,7 @@
 #wow-details {
     margin-bottom: 1%;
     max-width: 120rem;
+    max-height: 35rem;
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
     color: var(--textColour);
     cursor: pointer;
@@ -8,7 +9,7 @@
 
     overflow: auto;
     display: flex;
-    flex-direction: row;
+    grid-template-columns: auto auto;
 
     &:hover {
         transform: scale(0.994);
@@ -19,30 +20,42 @@
 #details-column {
     margin-left: 1%;
     margin-right: 1%;
-    width: 70%;
-    display: flex;
+    min-width: 50%;
+    max-width: 55%;
+
     flex-direction: column;
 }
 
 #title-row {
-    width: 80%;
+    flex-wrap: wrap;
+}
+
+.no-bottom-margin {
+    margin-bottom: 0px;
 }
 
 #other-details {
     float: left;
-    width: 80%;
+
+    min-width: 50%;
+    max-width: 80%;
+
+    height: auto;
 }
 
 #poster-column {
-    display: flex;
-    justify-content: right;
-    width: 20%;
-    height: 100%;
+    width: auto;
+    min-width: 20%;
+    max-width: 45%;
+    height: auto;
 
-    flex: 1;
+    margin-left: 10%;
+
+    overflow: hidden;
 }
 
 #poster-image {
-    width: 300px;
-    height: 450px;
+    display: block;
+    width: 100%;
+    height: auto;
 }

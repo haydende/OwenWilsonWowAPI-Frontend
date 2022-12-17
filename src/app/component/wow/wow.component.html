@@ -1,18 +1,19 @@
 <div id="wow-details">
-    <div id="details-column">
-        <div id="title-row">
-            <h1>{{wow.movie}} - {{wow.director}} - {{wow.year}}</h1><h2>(Wow {{wow.current_wow_in_movie}}/{{wow.total_wows_in_movie}})</h2>
-        </div>
-        <div id="other-details">
-            <p><strong>Release Date</strong>: {{wow.release_date}}</p>
-            <p><strong>Owen Wilson's Character</strong>: {{wow.character}}</p>
-            <p><strong>Movie Duration</strong>: {{wow.movie_duration}}</p>
-            <p><strong>Timestamp</strong>: {{wow.timestamp}}</p>
-            <p><strong>Full line</strong>: {{wow.full_line}}</p>
-            <p>Audio link: {{wow.audio}}</p>        
-        </div>
+  <div id="details-column">
+    <div id="title-row">
+      <h1 class="no-bottom-margin">{{wow.movie}}, {{wow.director}}, {{wow.year}}</h1>
     </div>
-    <div id="poster-column">
-        <img id="poster-image" src="{{wow.poster}}" alt="Poster for {{wow.movie}}">
+    <div id="other-details">
+      <h2 class="no-bottom-margin">(Wow {{wow.current_wow_in_movie}}/{{wow.total_wows_in_movie}})</h2>
+      <p><strong>Release Date</strong>: {{wow.release_date}}</p>
+      <p><strong>Owen Wilson's Character</strong>: {{wow.character}}</p>
+      <p><strong>Movie Duration</strong>: {{wow.movie_duration}}</p>
+      <p><strong>Timestamp</strong>: {{wow.timestamp}}</p>
+      <p><strong>Full line</strong>: {{wow.full_line}}</p>
+<!--      <p>Audio link: {{wow.audio}}</p>-->
     </div>
+  </div>
+  <div id="poster-column">
+    <img id="poster-image" src="{{wow.poster}}" alt="Poster for {{wow.movie}}">
+  </div>
 </div>
