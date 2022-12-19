@@ -7,9 +7,10 @@ import { ThemeService } from './service/theme.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'owen-wilson-wow-frontend';
+  title = 'owen-wowson-app';
 
   constructor(private themeService: ThemeService) {
     // Theme being applied is dependent on themeService being initialised
   }
+
 }
