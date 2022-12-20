@@ -20,7 +20,7 @@ export class ThemeService {
     private updateCurrentTheme(theme: Theme) {
         this.currentTheme = theme;
         this.themeChangedSubject.next(this.currentTheme);
-        console.log(`Theme to be applied: [${this.currentTheme}]`); // TODO: log
+        console.log(`Theme to be applied: [${this.currentTheme}]`); // TODO: log?
 
         this.settingStorage.saveSetting(Setting.THEME, this.currentTheme);
     }
@@ -28,11 +28,11 @@ export class ThemeService {
     private init() {
         const deviceTheme = window.matchMedia("(prefers-color-scheme: dark)");
         let initTheme: Theme = this.settingStorage.getSetting(Setting.THEME) as Theme;
-        console.log(`Contents of theme setting: [${initTheme}]`); // TODO: log
+        console.log(`Contents of theme setting: [${initTheme}]`); // TODO: log?
         if (!initTheme) {
-            deviceTheme.matches ? (initTheme = Theme.DARK) : (initTheme = Theme.LIGHT); // TODO: refactor
+            deviceTheme.matches ? (initTheme = Theme.DARK) : (initTheme = Theme.LIGHT); // TODO: refactor?
         }
-        console.log(`Initialising with theme [${initTheme}]`); // TODO: log
+        console.log(`Initialising with theme [${initTheme}]`); // TODO: log?
 
         this.updateCurrentTheme(initTheme);
         this.document.body.classList.add(this.currentTheme.toLowerCase());

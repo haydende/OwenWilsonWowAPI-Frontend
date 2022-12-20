@@ -1,14 +1,14 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import {ThemeService} from "./service/theme.service";
-import {SettingLocalStorageService} from "./service/setting-storage.service";
+import { ThemeService } from "./service/theme.service";
+import { SettingLocalStorageService } from "./service/setting-storage.service";
 
-describe('Component: App', () => {
+describe('AppComponent', () => {
 
   const title = 'owen-wowson-app';
 
-  describe('Component: App :: Unit Tests', () => { // Question: better way to segregate unit vs IT?
+  describe('AppComponent :: Unit Tests', () => { // Question: better way to segregate unit vs IT?
 
     const fakeThemeService = jasmine.createSpyObj('themeService', ['applyTheme']);
     const underTest = new AppComponent(fakeThemeService);
@@ -19,7 +19,7 @@ describe('Component: App', () => {
 
   });
 
-  describe('Component: App :: Integration Tests', () => {
+  describe('AppComponent :: Integration Tests', () => {
 
     let fixture: ComponentFixture<AppComponent>;
     let service: ThemeService;
@@ -40,7 +40,7 @@ describe('Component: App', () => {
 
     });
 
-    it('should create the app', () => {
+    it('should create', () => {
       expect(underTest).toBeTruthy();
     });
 
