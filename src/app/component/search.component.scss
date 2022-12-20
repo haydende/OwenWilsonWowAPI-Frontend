@@ -43,7 +43,9 @@ div#submit {
     &:hover {
         transition: 300ms;
         background-color: rgba(75, 75, 75, 0.3);
+        cursor: pointer;
     }
+
 }
 
 .criteria-field {
@@ -63,6 +65,7 @@ div#submit {
     &:hover {
         transition: 500ms;
         box-shadow: var(--inputHighlightShadow);
+        cursor: pointer;
     }
 }
 
