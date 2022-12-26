@@ -1,0 +1,12 @@
+
+@media screen and (max-width: 480px) {
+  --h1FontSize: 6rem;
+  --h2FontSize: 4rem;
+  --pFontSize: 2rem;
+}
+
+@media screen and (min-width: 480px) {
+  --h1FontSize: 16rem;
+  --h2FontSize: 14rem;
+  --pFontSize: 12rem;
+}
