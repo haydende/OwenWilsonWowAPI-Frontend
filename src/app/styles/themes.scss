@@ -1,0 +1,36 @@
+
+@mixin lighten() {
+  --backgroundColour: rgb(240,240,240);
+  --textColour: black;
+  --borderColour: black;
+  --btnBgColourActive: rgba(25,25,25,0.3);
+  --currentTabHighlight: 1px solid black;
+  --shadowColour: rgba(0,0,0,0.2);
+
+  --inputBackgroundColour: rgb(220,220,220);
+  --inputTextColour: rgb(0,0,0);
+  --inputHighlightShadow: -1px -1px 30px 1px rgba(0,0,0,0.1);
+}
+
+@mixin darken() {
+  --backgroundColour: rgb(30, 30, 30);
+  --textColour: rgb(230,230,230);
+  --borderColour: white;
+  --btnBgColourActive: rgba(230,230,230,0.3);
+  --currentTabHighlight: 1px solid white;
+  --shadowColour: rgba(0,0,0,0.2);
+
+  --inputBackgroundColour: rgb(50,50,50);
+  --inputTextColour: rgb(230,230,230);
+  --inputHighlightShadow: -1px -1px 5px 1px rgba(255,255,255,0.1);
+}
+
+body.dark {
+  @include darken();
+  background-color: var(--backgroundColour);
+}
+
+body.light {
+  @include lighten();
+  background-color: var(--backgroundColour);
+}
