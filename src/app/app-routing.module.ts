@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'random', component: RandomWowSearchComponent },
   { path: 'ordered', component: OrderedWowSearchComponent},
   { path: 'settings', component: SettingsComponent},
-  { path: '**', component: RandomWowSearchComponent}
+  { path: '**', redirectTo: 'random'}
 ];
 
 @NgModule({
