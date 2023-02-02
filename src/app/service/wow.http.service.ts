@@ -19,36 +19,27 @@ export class WowHttpService {
     let requestUrl = `${this.urlBase}/random`;
     let isFirstParam = true;
 
-    if (results != null) {
+    if (results != null || results != undefined ) {
       requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
-      console.log(requestUrl);
       requestUrl = `${requestUrl}results=${results}`;
-      console.log(requestUrl);
       isFirstParam = false;
     }
 
-    if (year != null) {
+    if (year != null || year != undefined) {
       requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
-      console.log(requestUrl);
       requestUrl = `${requestUrl}year=${year}`;
-      console.log(requestUrl);
       isFirstParam = false;
     }
 
-    if (movie != "") {
+    if (movie != null || movie != undefined) {
       requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
-      console.log(requestUrl);
       requestUrl = `${requestUrl}movie=${movie}`;
-      console.log(requestUrl);
       isFirstParam = false;
     }
 
-    if (director != "") {
+    if (director != null || director != undefined) {
       requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
-      console.log(requestUrl);
       requestUrl = `${requestUrl}director=${director}`;
-      console.log(requestUrl);
-      isFirstParam = false;
     }
 
     console.log(`Sending request to ${requestUrl}`);
