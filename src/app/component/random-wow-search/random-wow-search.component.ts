@@ -21,18 +21,18 @@ export class RandomWowSearchComponent implements OnInit {
   constructor(private wowService: WowHttpService) {
     this.wowService.getMovieNames()
       .subscribe((movieNames) => this.movieNames = movieNames);
-    console.log(`Movies names received: ${this.movieNames}`);
+    console.debug(`Movies names received: ${this.movieNames}`);
 
-    this.wowService.getDirectorNames() 
+    this.wowService.getDirectorNames()
       .subscribe((directorNames) => this.directorNames = directorNames);
-    console.log(`Director names receieved: ${this.directorNames}`);
+    console.debug(`Director names receieved: ${this.directorNames}`);
   }
 
   ngOnInit(): void {
   }
 
   submit(): void {
-    console.log(`Searching for Wows with criterion: Count: ${this.results}, Year of release: ${this.year}, Movie title: ${this.movieName}`);
+    console.debug(`Searching for Wows with criterion: Count: ${this.results}, Year of release: ${this.year}, Movie title: ${this.movieName}`);
     this.wowService.getRandom(this.results, this.year, this.movieName, this.directorName)
       .subscribe((list) => this.wows = list);
   }

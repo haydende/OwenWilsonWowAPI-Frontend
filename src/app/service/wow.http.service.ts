@@ -42,7 +42,7 @@ export class WowHttpService {
       requestUrl = `${requestUrl}director=${director}`;
     }
 
-    console.log(`Sending request to ${requestUrl}`);
+    console.debug(`Sending request to ${requestUrl}`);
     return this.httpClient.get<Wow[]>(requestUrl);
   }
 
@@ -55,20 +55,20 @@ export class WowHttpService {
       requestUrl = `${requestUrl}-${startIndex}`; // force API to respond with array
     }
 
-    console.log(`Sending request to ${requestUrl}`);
+    console.debug(`Sending request to ${requestUrl}`);
     return this.httpClient.get<Wow[]>(requestUrl);
 
   }
 
   public getMovieNames(): Observable<string[]>{
     let requestUrl = `${this.urlBase}/movies`;
-    console.log(`Sending request to ${requestUrl}`);
+    console.debug(`Sending request to ${requestUrl}`);
     return this.httpClient.get<string[]>(requestUrl);
   }
 
   public getDirectorNames(): Observable<string[]> {
     let requestUrl = `${this.urlBase}/directors`;
-    console.log(`Sending request to ${requestUrl}`);
+    console.debug(`Sending request to ${requestUrl}`);
     return this.httpClient.get<string[]>(requestUrl);
   }
 
