@@ -25,30 +25,6 @@ describe('NavigationComponent', () => {
       component = new NavigationComponent(mockRouter);
     })
 
-    it('should create', () => {
-      expect(component).toBeTruthy();
-    })
-
-    it('should return true when isCurrentPath is called with "/random" when path is "/random"', () => {
-      spyOnProperty(mockRouter, 'url').and.returnValue('/random');
-      expect(component.isCurrentPath("/random")).toBeTruthy();
-    })
-
-    it('should return true when isCurrentPath is called with "/ordered" when path is "/ordered"', () => {
-      spyOnProperty(mockRouter, 'url').and.returnValue('/ordered');
-      expect(component.isCurrentPath('/ordered')).toBeTruthy();
-    })
-
-    it('should return true when isCurrentPath is called with "/settings" when path is "/settings"', () => {
-      spyOnProperty(mockRouter, 'url').and.returnValue('/settings');
-      expect(component.isCurrentPath('/settings')).toBeTruthy();
-    })
-
-    it('should return false when isCurrentPath is called with "/settings" when path is "/random"', () => {
-      spyOnProperty(mockRouter, 'url').and.returnValue('/random');
-      expect(component.isCurrentPath('/settings')).toBeFalsy();
-    })
-
     it('should create and load HTML Template', () => {
       expect(component).toBeTruthy();
       let compiled = fixture.nativeElement as HTMLElement;
@@ -299,6 +275,26 @@ describe('NavigationComponent', () => {
         expect(settingsButton.classList.contains('current-tab')).toBeTruthy();
         expect(mockRouter.url).toEqual('settings');
       })
+    })
+
+    it('should return true when isCurrentPath is called with "/random" when path is "/random"', () => {
+      spyOnProperty(mockRouter, 'url').and.returnValue('/random');
+      expect(component.isCurrentPath("/random")).toBeTrue();
+    })
+
+    it('should return true when isCurrentPath is called with "/ordered" when path is "/ordered"', () => {
+      spyOnProperty(mockRouter, 'url').and.returnValue('/ordered');
+      expect(component.isCurrentPath('/ordered')).toBeTrue();
+    })
+
+    it('should return true when isCurrentPath is called with "/settings" when path is "/settings"', () => {
+      spyOnProperty(mockRouter, 'url').and.returnValue('/settings');
+      expect(component.isCurrentPath('/settings')).toBeTrue();
+    })
+
+    it('should return false when isCurrentPath is called with "/settings" when path is "/random"', () => {
+      spyOnProperty(mockRouter, 'url').and.returnValue('/random');
+      expect(component.isCurrentPath('/settings')).toBeFalse();
     })
   })
 })
