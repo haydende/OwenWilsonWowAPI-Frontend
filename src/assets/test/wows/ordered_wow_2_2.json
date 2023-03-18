@@ -1,0 +1,22 @@
+[
+  {
+    "movie": "Movie Name 1",
+    "year": 1996,
+    "release_date": "1996-02-21",
+    "director": "Director Name 1",
+    "character": "Dignan",
+    "movie_duration": "01:31:44",
+    "timestamp": "01:08:25",
+    "full_line": "Oh wow, that's one of your little drawings.",
+    "current_wow_in_movie": 3,
+    "total_wows_in_movie": 3,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/4EY9GqHtORVXebFYywzgQP/32e3808e156a880c75063f42918390ef/Bottle_Rocket_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/5w3bsLhy7LFBcnxz90krH7/8d9542d002c5255afcb033cfa51e70af/Bottle_Rocket_Wow_3_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/ZVi6OFIq43MdyeZj2cEJ7/7bb62a6b5d5dffdb8d7092de559b7609/Bottle_Rocket_Wow_3_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/1PE1waVjCGjT8nQVYpJHE9/17f72cf6849cf8439ac1c946e5d2d4a1/Bottle_Rocket_Wow_3_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/5PBCBeixxOCpfo4IUA8oIw/8a465202aaca71f6075cf731ebe7bafb/Bottle_Rocket_Wow_3_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/5xUOifToSk7ri9HUUZaPm4/07205e779c041f9702e86c2b7e3bfcff/Bottle_Rocket_Wow_3.mp3"
+  }
+]

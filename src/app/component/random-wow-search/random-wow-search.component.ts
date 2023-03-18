@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { Wow } from 'src/app/model/wow';
 import { WowHttpService } from 'src/app/service/wow.http.service';
 
@@ -10,13 +10,13 @@ import { WowHttpService } from 'src/app/service/wow.http.service';
 export class RandomWowSearchComponent implements OnInit {
 
   wows: Wow[] = [];
-  movieNames: string[] = ["Meet the Parents"];
-  directorNames: string[] = ["Jay Roach"];
+  movieNames: string[] = [];
+  directorNames: string[] = [];
 
-  @Input() public results = 5;
-  @Input() public year = 2000;
-  @Input() public movieName = "Meet the Parents";
-  @Input() public directorName = "Jay Roach"
+  @Input() public results: number | null = 5;
+  @Input() public year: number | null = 2000;
+  @Input() public movieName: string | null = this.movieNames[0];
+  @Input() public directorName: string | null = this.directorNames[0];
 
   constructor(private wowService: WowHttpService) {
     this.wowService.getMovieNames()
@@ -25,14 +25,16 @@ export class RandomWowSearchComponent implements OnInit {
 
     this.wowService.getDirectorNames()
       .subscribe((directorNames) => this.directorNames = directorNames);
-    console.debug(`Director names receieved: ${this.directorNames}`);
+    console.debug(`Director names received: ${this.directorNames}`);
   }
 
   ngOnInit(): void {
+    this.movieName = this.movieNames[0];
+    this.directorName = this.directorNames[0];
   }
 
   submit(): void {
-    console.debug(`Searching for Wows with criterion: Count: ${this.results}, Year of release: ${this.year}, Movie title: ${this.movieName}`);
+    console.debug(`Searching for Wows with criterion: Count: [${this.results}], Year of release: [${this.year}], Movie title: [${this.movieName}] and Director Name: [${this.directorName}]`);
     this.wowService.getRandom(this.results, this.year, this.movieName, this.directorName)
       .subscribe((list) => this.wows = list);
   }

@@ -1,0 +1,102 @@
+[
+  {
+    "movie": "Little Fockers",
+    "year": 2010,
+    "release_date": "2010-12-22",
+    "director": "Paul Weitz",
+    "character": "Kevin Rawley",
+    "movie_duration": "01:37:40",
+    "timestamp": "00:26:32",
+    "full_line": "Wow.",
+    "current_wow_in_movie": 1,
+    "total_wows_in_movie": 2,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/2uitJuVd7wiuh57N42VotB/97be419cc8d17405b256bf6f63afd461/Little_Fockers_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/6sQcwSbOHUtQwSa2AiGVx4/4bd91b3f82378c6cec36003010b6bc7b/Little_Fockers_Wow_1_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/1MgGCFiDEMuDtZf5pPXZrq/9abb8fedcf84c2aad104a993cab043ef/Little_Fockers_Wow_1_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/5jBrCwue7YyNWATPMsnEM3/3897126fa0cacee7817cb798db85a829/Little_Fockers_Wow_1_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/4NRdmxRxOFF7u8uSDCDpbz/f948d2f764468c89f5e37fa2b3804661/Little_Fockers_Wow_1_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/3B0YwIinFRjyDhg87ubLnm/e7ca0400c19fe1fe118ebc2901dc3518/Little_Fockers_Wow_1.mp3"
+  },
+  {
+    "movie": "Meet the Parents",
+    "year": 2000,
+    "release_date": "2000-10-06",
+    "director": "Jay Roach",
+    "character": "Kevin Rawley",
+    "movie_duration": "01:47:39",
+    "timestamp": "00:56:16",
+    "full_line": "Well, so was JC! Wow, you're in good company.",
+    "current_wow_in_movie": 2,
+    "total_wows_in_movie": 2,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/3gZNaRP4IqEDG0Vs3ntCUc/ec3f5c9ce1e42e83a8dcbc9ed199d604/Meet_the_Parents_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/511EVfdb0nnM1zlWeFTnuj/2df1ba6f8ddaf445b73a3103a88d8314/Meet_the_Parents_Wow_2_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/4CLvfbAWDOTyDHhZKvpflX/fbf41eefee905fea240283dafe3b64a0/Meet_the_Parents_Wow_2_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/37w17u0kUUmg01hVZFXNud/17839fc0f87e00e2af79bfad7b36ef7f/Meet_the_Parents_Wow_2_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/6OT1bszjJ8Lf3jtlVoRoHx/4d6eab3db8876c48e65978b31d24cd89/Meet_the_Parents_Wow_2_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/2SgnPN23fk4EPQ7yuSQDiJ/3c0f409e7e775bebff2c526bd42dc159/Meet_the_Parents_Wow_2.mp3"
+  },
+  {
+    "movie": "Cars 2",
+    "year": 2011,
+    "release_date": "2011-06-18",
+    "director": "John Lasseter",
+    "character": "Lightning McQueen",
+    "movie_duration": "01:47:01",
+    "timestamp": "00:10:53",
+    "full_line": "Wow.",
+    "current_wow_in_movie": 1,
+    "total_wows_in_movie": 1,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/76IqehTyoKY0nEOb27KVeN/8da7dc62b18da132b23c4cfa27dfecbf/Cars_2_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/2kM0aGgsg5gs3YVejP7Vam/c007b0baf9d05bad9c9a7126b21d92b6/Cars_2_Wow_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/4FzP0omfeMThOhuq7JQrdV/78a0f278a11d5496c7e2d541767da103/Cars_2_Wow_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/33kn8W9ZhSZmqWqcT72G6E/d06b51805ddccde2823a7c03c9344e1d/Cars_2_Wow_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/2PWdPmfKi3ku1eeBr77Ya/521a4c3c2cf866975ae54f8d03d62582/Cars_2_Wow_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/2Z4SojTGOfI7eivcEqiFRu/56213e128ff5172a598be105f8adffc3/Cars_2_Wow.mp3"
+  },
+  {
+    "movie": "Free Birds",
+    "year": 2013,
+    "release_date": "2013-11-01",
+    "director": "Jimmy Hayward",
+    "character": "Reggie",
+    "movie_duration": "01:31:03",
+    "timestamp": "00:29:25",
+    "full_line": "Oh, wow.",
+    "current_wow_in_movie": 1,
+    "total_wows_in_movie": 3,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/7MaIGsHazkYQr23iZVVrNr/a7d63846d09edd763a818a82a6b959e3/Free_Birds_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/4O2lqQIQHF1GfhQpqX0QDe/00edbe7ba3d8460e62cd937ba57a7c15/Free_Birds_Wow_1_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/4w5YydJjd8Pl2aIWjjTnbC/cadec255ea84c80af85f073ebed1ef01/Free_Birds_Wow_1_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/3WvV6ydWvf2OK5X1HeDh5Z/a07d11ba13355a0b118ba2274cefc9c7/Free_Birds_Wow_1_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/I8vHgAzU8beQohmQLmHtL/b2f7eb04620b6eafc08af91736fe6b73/Free_Birds_Wow_1_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/3ElD4KMMrXF4THJQJioi5H/b1a02fcac64736997b9c13fbac87b142/Free_Birds_Wow_1.mp3"
+  },
+  {
+    "movie": "The Haunting",
+    "year": 1999,
+    "release_date": "1999-07-23",
+    "director": "Jan de Bont",
+    "character": "Luke Sanderson",
+    "movie_duration": "01:52:37",
+    "timestamp": "00:25:50",
+    "full_line": "Wow.",
+    "current_wow_in_movie": 3,
+    "total_wows_in_movie": 5,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/6Zu7ux0JYrUWk0UC8vxPtj/d0da8bfbad670655779a9921ac514759/The_Haunting_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/4BMbcttXdCTRqJlangSx5X/5538a4e5a4250496e0863e18a8852db6/The_Haunting_Wow_3_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/3SPyY9xmnfKYLqDF9v1YuG/7b5c5abb0bd0b98dc84b25a39f5fadbe/The_Haunting_Wow_3_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/5CiaFmd1nRoapI5dPHV88i/d21ab61fc3a00bd3fbdc2c5ec1c82598/The_Haunting_Wow_3_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/5i0dpiq2lGQMK9V1wHkSvM/ef53166dd842715dc7b5d2f43562405a/The_Haunting_Wow_3_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/2xYFEMZD3gRYYywaX50RDm/5cfe0f8c6a2b3794d00cf1f4c9e0c95f/The_Haunting_Wow_3.mp3"
+  }
+]

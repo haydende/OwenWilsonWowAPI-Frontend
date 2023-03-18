@@ -11,10 +11,10 @@ export class WowHttpService {
   constructor(private httpClient: HttpClient) { }
 
   public getRandom(
-    results: number = 5,
-    year?: number,
-    movie?: string,
-    director?: string
+    results: number | null = 5,
+    year?: number | null,
+    movie?: string | null,
+    director?: string | null
   ): Observable<Wow[]> {
     let requestUrl = `${this.urlBase}/random`;
     let isFirstParam = true;

@@ -1,0 +1,22 @@
+[
+  {
+    "movie": "Movie Name 1",
+    "year": 1996,
+    "release_date": "1996-02-21",
+    "director": "Director Name 1",
+    "character": "Dignan",
+    "movie_duration": "01:31:44",
+    "timestamp": "01:04:44",
+    "full_line": "Wow. Wow. Okay, no more fighting.",
+    "current_wow_in_movie": 1,
+    "total_wows_in_movie": 3,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/4EY9GqHtORVXebFYywzgQP/32e3808e156a880c75063f42918390ef/Bottle_Rocket_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/7spLWmHyAUz0TN8oNsAf5/a4d0739d07b8c511f5e59949bc0ccb1c/Bottle_Rocket_Wow_1_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/7AUtahGti2EMClGmW1rrZP/96e65cd64cce56684670c996ee94afd1/Bottle_Rocket_Wow_1_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/70L3BdbdbyszxEzg1BGAYN/9ec5064e7a92513f1ca611aee4435f16/Bottle_Rocket_Wow_1_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/4Z8ngFYNxK8p8Zu78cldCM/88a5ffc05c313691ebdd4969296a45fe/Bottle_Rocket_Wow_1_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/4vqXtu1j5ruJiGhk6bBltj/f35e792db87367e58e614fd5ba16efea/Bottle_Rocket_Wow_1.mp3"
+  }
+]
