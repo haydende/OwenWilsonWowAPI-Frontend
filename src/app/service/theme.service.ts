@@ -4,7 +4,6 @@ import { BehaviorSubject, Observable } from "rxjs";
 import { Theme } from "../model/theme.model";
 import { SettingLocalStorageService, Setting } from "./setting-storage.service";
 
-
 @Injectable()
 export class ThemeService {
 

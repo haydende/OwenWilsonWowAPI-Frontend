@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SettingsComponent } from './settings.component';
 import { ThemeService } from "../../service/theme.service";
 import { SettingLocalStorageService } from "../../service/setting-storage.service";

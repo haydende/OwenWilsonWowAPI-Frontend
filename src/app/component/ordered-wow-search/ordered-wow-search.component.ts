@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Wow } from 'src/app/model/wow';
 import { WowHttpService } from 'src/app/service/wow.http.service';
-import { RandomWowSearchComponent } from '../random-wow-search/random-wow-search.component';
 
 @Component({
   selector: 'ordered-wow-search',

@@ -1,12 +1,8 @@
-import {ComponentFixture, TestBed, inject, waitForAsync} from "@angular/core/testing";
-import { DebugElement } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 import { WowHttpService } from "./wow.http.service";
-import {of} from "rxjs";
-import {HttpClient} from "@angular/common/http";
 
 describe('WowHttpService', () => {
   let service: WowHttpService;
-  let de: DebugElement
   let mockHttpClient: HttpClient
 
   beforeEach(() => {

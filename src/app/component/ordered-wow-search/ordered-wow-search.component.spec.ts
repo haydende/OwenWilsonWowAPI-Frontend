@@ -1,9 +1,9 @@
-import {OrderedWowSearchComponent} from "./ordered-wow-search.component";
-import {ComponentFixture, TestBed} from "@angular/core/testing";
-import {HttpClientModule} from "@angular/common/http";
-import {AppComponent} from "../../app.component";
-import {WowHttpService} from "../../service/wow.http.service";
-import {FormsModule} from "@angular/forms";
+import { OrderedWowSearchComponent } from "./ordered-wow-search.component";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { HttpClientModule } from "@angular/common/http";
+import { AppComponent } from "../../app.component";
+import { WowHttpService } from "../../service/wow.http.service";
+import { FormsModule } from "@angular/forms";
 import { Wow } from "../../model/wow";
 import { of } from "rxjs";
 import * as ORDERED_WOW_0_0 from "../../../assets/test/wows/ordered_wow_0_0.json";

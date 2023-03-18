@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Wow } from '../model/wow';
 import { Observable } from 'rxjs';
+import { Wow } from '../model/wow';
 
 @Injectable()
 export class WowHttpService {
