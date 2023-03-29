@@ -1,8 +1,8 @@
-import { DOCUMENT } from "@angular/common";
-import { Inject, Injectable } from "@angular/core";
-import { BehaviorSubject, Observable } from "rxjs";
-import { Theme } from "../model/theme.model";
-import { SettingLocalStorageService, Setting } from "./setting-storage.service";
+import {DOCUMENT} from "@angular/common";
+import {Inject, Injectable} from "@angular/core";
+import {BehaviorSubject, Observable} from "rxjs";
+import {Theme} from "../model/theme.model";
+import {Setting, SettingLocalStorageService} from "./setting-storage.service";
 
 @Injectable()
 export class ThemeService {
@@ -29,13 +29,12 @@ export class ThemeService {
     }
 
     private init() {
-        const deviceTheme = window.matchMedia("(prefers-color-scheme: dark)");
-        let initTheme: Theme = this.settingStorage.getSetting(Setting.THEME) as Theme;
-        if (!initTheme) {
-            deviceTheme.matches ? (initTheme = Theme.DARK) : (initTheme = Theme.LIGHT); // TODO: refactor?
-        }
+        const savedTheme = this.settingStorage.getSetting(Setting.THEME) as Theme;
+        const prefersColorSchemeDark = window.matchMedia("(prefers-color-scheme: dark)");
+        let useDarkMode = (prefersColorSchemeDark.matches && savedTheme == null) || Theme.DARK == savedTheme
+        let themeToApply: Theme = (useDarkMode) ? Theme.DARK : savedTheme;
 
-        this.applyTheme(initTheme);
+        this.applyTheme(themeToApply);
     }
 
 }
