@@ -1,4 +1,4 @@
-import {ComponentFixture, TestBed, TestBedStatic} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SettingsComponent } from './settings.component';
 import { ThemeService } from "../../service/theme.service";
 import { SettingLocalStorageService } from "../../service/setting-storage.service";
@@ -35,7 +35,7 @@ describe('SettingsComponent', () => {
       localStorage.removeItem('theme');
     })
 
-    const createTestBedStatic = (): TestBedStatic => {
+    const createTestBed = (): TestBed => {
       return TestBed.configureTestingModule({
           declarations: [ SettingsComponent ],
           providers: [
@@ -46,13 +46,13 @@ describe('SettingsComponent', () => {
     }
 
     it('should default to dark theme, if theme has not been set', () => {
-      const testBedStatic = createTestBedStatic()
+      const testBed = createTestBed()
       const fixture = TestBed.createComponent(SettingsComponent);
       const component = fixture.componentInstance;
 
       fixture.autoDetectChanges(true);
 
-      testBedStatic.compileComponents();
+      testBed.compileComponents();
 
       fixture.ngZone!.run(() => {
         expect(component.currentTheme).toEqual('Dark');
@@ -62,7 +62,7 @@ describe('SettingsComponent', () => {
     it('should apply light theme, if theme has been set to "Light"', () => {
       localStorage.setItem('theme', 'Light');
 
-      const testBedStatic = createTestBedStatic();
+      const testBedStatic = createTestBed();
       const fixture = TestBed.createComponent(SettingsComponent);
       const component = fixture.componentInstance;
       fixture.autoDetectChanges(true);
