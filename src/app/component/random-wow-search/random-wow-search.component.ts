@@ -9,9 +9,11 @@ import { WowHttpService } from 'src/app/service/wow.http.service';
 })
 export class RandomWowSearchComponent implements OnInit {
 
-  wows: Wow[] = [];
-  movieNames: string[] = [];
   directorNames: string[] = [];
+  hasSubmitted: boolean = false;
+  movieNames: string[] = [];
+  wows: Wow[] = [];
+  error: any = null;
 
   @Input() public results: number | null = 5;
   @Input() public year: number | null = 2000;
@@ -36,7 +38,17 @@ export class RandomWowSearchComponent implements OnInit {
   submit(): void {
     console.debug(`Searching for Wows with criterion: Count: [${this.results}], Year of release: [${this.year}], Movie title: [${this.movieName}] and Director Name: [${this.directorName}]`);
     this.wowService.getRandom(this.results, this.year, this.movieName, this.directorName)
-      .subscribe((list) => this.wows = list);
+      .subscribe({
+        next: (list) => {
+          this.wows = list
+          this.error = null;
+        },
+        error: (error) => {
+          this.error = error;
+          console.error(error);
+        }
+      });
+    this.hasSubmitted = true;
   }
 
 }
