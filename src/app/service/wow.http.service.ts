@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Wow } from '../model/wow';
+import {NOT_APPLICABLE} from "../constants";
 
 @Injectable()
 export class WowHttpService {
@@ -10,12 +11,8 @@ export class WowHttpService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getRandom(
-    results: number | null = 5,
-    year?: number | null,
-    movie?: string | null,
-    director?: string | null
-  ): Observable<Wow[]> {
+  public getRandom(results: number | null = 5, year?: number | null, movie?: string | null, director?: string | null): Observable<Wow[]> {
+
     let requestUrl = `${this.urlBase}/random`;
     let isFirstParam = true;
 
@@ -31,13 +28,13 @@ export class WowHttpService {
       isFirstParam = false;
     }
 
-    if (movie != null || movie != undefined) {
+    if (movie != null && movie != NOT_APPLICABLE) {
       requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
       requestUrl = `${requestUrl}movie=${movie}`;
       isFirstParam = false;
     }
 
-    if (director != null || director != undefined) {
+    if (director != null && director != NOT_APPLICABLE) {
       requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
       requestUrl = `${requestUrl}director=${director}`;
     }

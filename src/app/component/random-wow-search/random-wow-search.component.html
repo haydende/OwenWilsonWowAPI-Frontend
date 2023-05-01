@@ -13,7 +13,6 @@
         <div id="movie-name-div" class="criteria-field">
             <label id="movie-name-label" for="movie-name-select" class="always-max-width">Name of movie:</label>
             <select id="movie-name-select" name="movie-name" class="criteria-input no-border rounded-corners" [(ngModel)]="this.movieName">
-                <option value="">N/A</option>
                 <option *ngFor="let movieName of this.movieNames" value="{{movieName}}">{{movieName}}</option>
             </select>
         </div>
@@ -21,7 +20,6 @@
         <div id="director-name-div" class="criteria-field">
             <label id="director-name-label" for="director-name-select" class="always-max-width">Name of director:</label>
             <select id="director-name-select" name="director-name" class="criteria-input no-border rounded-corners" [(ngModel)]="this.directorName">
-                <option value="">N/A</option>
                 <option *ngFor="let directorName of this.directorNames" value="{{directorName}}">
                     {{directorName}}
                 </option>

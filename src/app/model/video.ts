@@ -5,8 +5,6 @@ export class Video {
     private readonly _480p: string = "Link to 480p video of Wow";
     private readonly _360p: string = "Link to 360p video of Wow";
 
-    public constructor() { }
-
     public get "1080p"(): string {
         return this._1080p;
     }

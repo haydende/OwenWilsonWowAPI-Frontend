@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Wow } from 'src/app/model/wow';
 import { WowHttpService } from 'src/app/service/wow.http.service';
+import {NOT_APPLICABLE} from "../../constants";
 
 @Component({
   selector: 'random-wow-search',
@@ -9,9 +10,9 @@ import { WowHttpService } from 'src/app/service/wow.http.service';
 })
 export class RandomWowSearchComponent implements OnInit {
 
-  directorNames: string[] = [];
+  directorNames: string[] = [NOT_APPLICABLE];
+  movieNames: string[] = [NOT_APPLICABLE];
   hasSubmitted: boolean = false;
-  movieNames: string[] = [];
   wows: Wow[] = [];
   error: any = null;
 
@@ -22,11 +23,11 @@ export class RandomWowSearchComponent implements OnInit {
 
   constructor(private wowService: WowHttpService) {
     this.wowService.getMovieNames()
-      .subscribe((movieNames) => this.movieNames = movieNames);
+      .subscribe((movieNames) => this.movieNames = this.movieNames.concat(movieNames));
     console.debug(`Movies names received: ${this.movieNames}`);
 
     this.wowService.getDirectorNames()
-      .subscribe((directorNames) => this.directorNames = directorNames);
+      .subscribe((directorNames) => this.directorNames = this.directorNames.concat(directorNames));
     console.debug(`Director names received: ${this.directorNames}`);
   }
 
@@ -45,6 +46,7 @@ export class RandomWowSearchComponent implements OnInit {
         },
         error: (error) => {
           this.error = error;
+          this.wows = [];
           console.error(error);
         }
       });

@@ -17,8 +17,4 @@ export class Wow {
     public readonly video: Video = new Video();
     public readonly audio: string = "Link to audio of scene featuring the Wow";
 
-    public constructor() {
-
-    }
-
 }

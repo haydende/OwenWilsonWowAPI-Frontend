@@ -18,6 +18,18 @@
     <button id="submit-button" (click)="submit();" class="submit-button">Submit</button>
   </div>
 </div>
-<div id="search-results-div">
-  <wow-list [wows]="wows"></wow-list>
+<div id="search-results-div" *ngIf="hasSubmitted">
+  <div id="wow-list-div" class="display-flex justify-center" *ngIf="wows.length > 0">
+    <wow-list [wows]="wows"></wow-list>
+  </div>
+  <div id="search-empty-message-div" class="display-flex justify-center" *ngIf="wows.length == 0 && !error">
+    <label>It looks like nothing matched that criteria. Try again with something else!</label>
+  </div>
+  <div id="search-error-message-div" class="display-flex justify-center" *ngIf="error != null">
+    <label>It looks like there was an error when getting results. Give that another go, and submit an issue on GitHub if this persists!</label>
+  </div>
 </div>
+<div id="submit-message-div" *ngIf="!hasSubmitted" class="display-flex justify-center">
+  <label>Press submit to get some results!</label>
+</div>
+

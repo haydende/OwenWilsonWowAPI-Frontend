@@ -10,6 +10,4 @@ export class WowListComponent {
 
   @Input() public wows: Wow[] = [];
 
-  constructor() { }
-
 }
