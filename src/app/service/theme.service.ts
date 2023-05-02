@@ -31,7 +31,7 @@ export class ThemeService {
     private init() {
         const savedTheme = this.settingStorage.getSetting(Setting.THEME) as Theme;
         const prefersColorSchemeDark = window.matchMedia("(prefers-color-scheme: dark)");
-        let useDarkMode = (prefersColorSchemeDark.matches && savedTheme == null) || Theme.DARK == savedTheme
+        let useDarkMode = (prefersColorSchemeDark.matches || Theme.DARK == savedTheme) || savedTheme == null;
         let themeToApply: Theme = (useDarkMode) ? Theme.DARK : savedTheme;
 
         this.applyTheme(themeToApply);
