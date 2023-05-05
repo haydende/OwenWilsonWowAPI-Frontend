@@ -1,5 +1,5 @@
 
-div#search {
+div#search-div {
     box-shadow: 0px 0px 10px 0px var(--shadowColour);
     background-color: var(--backgroundColour);
     color: var(--textColour);
@@ -11,7 +11,7 @@ div#search {
     margin-bottom: 1%;
 }
 
-div#search-criteria {
+div#search-criteria-div {
     padding: 15px;
 
     display: flex;
@@ -19,13 +19,13 @@ div#search-criteria {
     flex-wrap: wrap;
 }
 
-div#search-results {
+div#search-results-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-div#submit {
+div#submit-button-div {
 
     margin-bottom: 1%;
 

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Wow } from '../model/wow';
 import { Observable } from 'rxjs';
+import { Wow } from '../model/wow';
+import {NOT_APPLICABLE} from "../constants";
 
 @Injectable()
 export class WowHttpService {
@@ -10,48 +11,35 @@ export class WowHttpService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getRandom(
-    results: number = 5,
-    year?: number,
-    movie?: string,
-    director?: string
-  ): Observable<Wow[]> {
+  public getRandom(results: number | null = 5, year?: number | null, movie?: string | null, director?: string | null): Observable<Wow[]> {
+
     let requestUrl = `${this.urlBase}/random`;
     let isFirstParam = true;
 
-    if (results != null) {
+    if (results != null || results != undefined ) {
       requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
-      console.log(requestUrl);
       requestUrl = `${requestUrl}results=${results}`;
-      console.log(requestUrl);
       isFirstParam = false;
     }
 
-    if (year != null) {
+    if (year != null || year != undefined) {
       requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
-      console.log(requestUrl);
       requestUrl = `${requestUrl}year=${year}`;
-      console.log(requestUrl);
       isFirstParam = false;
     }
 
-    if (movie != "") {
+    if (movie != null && movie != NOT_APPLICABLE) {
       requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
-      console.log(requestUrl);
       requestUrl = `${requestUrl}movie=${movie}`;
-      console.log(requestUrl);
       isFirstParam = false;
     }
 
-    if (director != "") {
+    if (director != null && director != NOT_APPLICABLE) {
       requestUrl = requestUrl + ((isFirstParam) ? "?" : "&");
-      console.log(requestUrl);
       requestUrl = `${requestUrl}director=${director}`;
-      console.log(requestUrl);
-      isFirstParam = false;
     }
 
-    console.log(`Sending request to ${requestUrl}`);
+    console.debug(`Sending request to ${requestUrl}`);
     return this.httpClient.get<Wow[]>(requestUrl);
   }
 
@@ -64,20 +52,20 @@ export class WowHttpService {
       requestUrl = `${requestUrl}-${startIndex}`; // force API to respond with array
     }
 
-    console.log(`Sending request to ${requestUrl}`);
+    console.debug(`Sending request to ${requestUrl}`);
     return this.httpClient.get<Wow[]>(requestUrl);
 
   }
 
   public getMovieNames(): Observable<string[]>{
     let requestUrl = `${this.urlBase}/movies`;
-    console.log(`Sending request to ${requestUrl}`);
+    console.debug(`Sending request to ${requestUrl}`);
     return this.httpClient.get<string[]>(requestUrl);
   }
 
   public getDirectorNames(): Observable<string[]> {
     let requestUrl = `${this.urlBase}/directors`;
-    console.log(`Sending request to ${requestUrl}`);
+    console.debug(`Sending request to ${requestUrl}`);
     return this.httpClient.get<string[]>(requestUrl);
   }
 

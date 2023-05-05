@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Wow } from 'src/app/model/wow';
 
 @Component({
@@ -6,13 +6,8 @@ import { Wow } from 'src/app/model/wow';
   templateUrl: './wow-list.component.html',
   styleUrls: ['./wow-list.component.scss']
 })
-export class WowListComponent implements OnInit {
+export class WowListComponent {
 
   @Input() public wows: Wow[] = [];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

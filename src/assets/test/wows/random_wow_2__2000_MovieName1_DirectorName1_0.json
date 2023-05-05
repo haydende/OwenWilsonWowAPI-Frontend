@@ -1,0 +1,42 @@
+[
+  {
+    "movie": "Shanghai Knights",
+    "year": 2003,
+    "release_date": "2003-02-03",
+    "director": "David Dobkin",
+    "character": "Roy O'Bannon",
+    "movie_duration": "01:54:21",
+    "timestamp": "01:43:47",
+    "full_line": "Wow! That's a good message.",
+    "current_wow_in_movie": 4,
+    "total_wows_in_movie": 4,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/4pb4EMrNtfK3x9PyTMLcGl/bd4d6db24a4247b0f33211eeb882c26a/Shanghai_Knights_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/Gtxnnod4iSbNLoRyKiYqy/208667cff34f9151584e0fdac95b875c/Shanghai_Knights_Wow_4_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/11dT7kCePmGuumeWSgyyyp/6b43c568d515034fbac17f80e92e3597/Shanghai_Knights_Wow_4_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/31HF06vDDGW66QvtYN5Uaf/eb7aafc5c5edfde8087fff12b1b124d9/Shanghai_Knights_Wow_4_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/6mFM0HuwIohxkXRN168fHy/f0a9187103721c4fad171979f6bd9eee/Shanghai_Knights_Wow_4_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/50j8j4QZ9ruslduUazL82Y/cad5fabd2a1080de0609adec4bd7c3ab/Shanghai_Knights_Wow_4.mp3"
+  },
+  {
+    "movie": "Hall Pass",
+    "year": 2011,
+    "release_date": "2011-02-25",
+    "director": "Peter Farrelly and Bobby Farrelly",
+    "character": "Rick Mills",
+    "movie_duration": "01:51:35",
+    "timestamp": "01:05:12",
+    "full_line": "Wow.",
+    "current_wow_in_movie": 4,
+    "total_wows_in_movie": 6,
+    "poster": "https://images.ctfassets.net/bs8ntwkklfua/6jFEUPmYiKifaTuC2cugm8/22087834d091445fc9393cdd9163a901/Hall_Pass_Poster.jpg",
+    "video": {
+      "1080p": "https://videos.ctfassets.net/bs8ntwkklfua/1C8TPI7yDxxK9qAlMsBGEH/16cfaf8e7333344046aaa4c8afb296b2/Hall_Pass_Wow_4_1080p.mp4",
+      "720p": "https://videos.ctfassets.net/bs8ntwkklfua/2zjDTW0TxCxOc455pcINEl/baaf8f331d29f58641a61baca0942f0b/Hall_Pass_Wow_4_720p.mp4",
+      "480p": "https://videos.ctfassets.net/bs8ntwkklfua/3q34qMsvY03UZWY8DXuHqs/35f98e652d326d739e21bd237c520048/Hall_Pass_Wow_4_480p.mp4",
+      "360p": "https://videos.ctfassets.net/bs8ntwkklfua/v6tSCvjbln86wLOAlERsv/bb1dbfddcf349ef82bb46df53bd40b0a/Hall_Pass_Wow_4_360p.mp4"
+    },
+    "audio": "https://assets.ctfassets.net/bs8ntwkklfua/5Xc2NTY2HJQjKDiLOPhGzO/a086b30a35aa5c6b9ac994ac6a353b1c/Hall_Pass_Wow_4.mp3"
+  }
+]

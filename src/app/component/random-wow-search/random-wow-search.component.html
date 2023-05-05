@@ -1,27 +1,25 @@
-<div id="search" class="align-center">
-    <div id="search-criteria" class="align-center">
-        <div id="results" class="criteria-field">
-            <label for="list-results" class="always-max-width">Results to get:</label>
-            <input type="number" id="list-results" [(ngModel)]="this.results" class="criteria-input no-border rounded-corners">
+<div id="search-div" class="align-center" xmlns="http://www.w3.org/1999/html">
+    <div id="search-criteria-div" class="align-center">
+        <div id="results-div" class="criteria-field">
+            <label id="results-label" for="results-input" class="always-max-width">Results to get:</label>
+            <input id="results-input" type="number" [(ngModel)]="this.results" class="criteria-input no-border rounded-corners">
         </div>
 
-        <div id="year" class="criteria-field">
-            <label for="year" class="always-max-width">Year of movie release:</label>
-            <input type="text" id="year" class="always-max-width" [(ngModel)]="this.year" class="criteria-input no-border rounded-corners">
+        <div id="year-div" class="criteria-field">
+            <label id="year-label" for="year-input" class="always-max-width">Year of movie release:</label>
+            <input id="year-input" type="number" class="always-max-width criteria-input no-border rounded-corners" [(ngModel)]="this.year">
         </div>
 
-        <div id="movie-name" class="criteria-field">
-            <label for="movie-name" class="always-max-width">Name of movie:</label>
-            <select name="movie-name" id="movie-name" [(ngModel)]="this.movieName" class="criteria-input no-border rounded-corners">
-                <option value="">N/A</option>
+        <div id="movie-name-div" class="criteria-field">
+            <label id="movie-name-label" for="movie-name-select" class="always-max-width">Name of movie:</label>
+            <select id="movie-name-select" name="movie-name" class="criteria-input no-border rounded-corners" [(ngModel)]="this.movieName">
                 <option *ngFor="let movieName of this.movieNames" value="{{movieName}}">{{movieName}}</option>
             </select>
         </div>
 
-        <div id="director-name" class="criteria-field">
-            <label for="director-name" class="always-max-width">Name of director:</label>
-            <select name="director-name" id="director-name" [(ngModel)]="this.directorName" class="criteria-input no-border rounded-corners">
-                <option value="">N/A</option>
+        <div id="director-name-div" class="criteria-field">
+            <label id="director-name-label" for="director-name-select" class="always-max-width">Name of director:</label>
+            <select id="director-name-select" name="director-name" class="criteria-input no-border rounded-corners" [(ngModel)]="this.directorName">
                 <option *ngFor="let directorName of this.directorNames" value="{{directorName}}">
                     {{directorName}}
                 </option>
@@ -29,10 +27,21 @@
         </div>
 
     </div>
-    <div id="submit">
-        <button (click)="submit();" class="submit-button">Submit</button>
+    <div id="submit-button-div">
+        <button id="submit-button" (click)="submit();" class="submit-button">Submit</button>
     </div>
 </div>
-<div id="search-results">
-    <wow-list [wows]="wows"></wow-list>
+<div id="search-results-div" *ngIf="hasSubmitted">
+    <div id="wow-list-div" *ngIf="wows.length > 0">
+      <wow-list [wows]="wows"></wow-list>
+    </div>
+    <div id="search-empty-message-div" *ngIf="wows.length == 0 && !error" class="display-flex justify-center">
+      <label>It looks like nothing matched that criteria. Try again with something else!</label>
+    </div>
+    <div id="search-error-message-div" *ngIf="error != null" class="display-flex justify-center">
+      <label>It looks like there was an error when getting results. Give that another go, and submit an issue on GitHub if this persists!</label>
+    </div>
+</div>
+<div id="submit-message" *ngIf="!hasSubmitted" class="display-flex justify-center">
+  <label>Press submit to get some results!</label>
 </div>

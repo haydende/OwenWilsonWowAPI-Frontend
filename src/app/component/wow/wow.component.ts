@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Wow } from 'src/app/model/wow';
 
 @Component({
@@ -6,14 +6,8 @@ import { Wow } from 'src/app/model/wow';
   templateUrl: './wow.component.html',
   styleUrls: ['./wow.component.scss']
 })
-export class WowComponent implements OnInit {
+export class WowComponent {
 
   @Input() wow: Wow = new Wow();
-
-  constructor() { 
-  }
-
-  ngOnInit(): void {
-  }
 
 }
