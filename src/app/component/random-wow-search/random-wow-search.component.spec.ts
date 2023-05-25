@@ -12,6 +12,7 @@ import * as RANDOM_WOW_5_2000_MOVIENAME1_DIRECTORNAME1 from "../../../assets/tes
 import * as RANDOM_WOW_5_2000_MOVIENAME1_DIRECTORNAME2 from "../../../assets/test/wows/random_wow_5_2000_MovieName1_DirectorName2_0.json";
 import * as RANDOM_WOW_5_2000_MOVIENAME2_DIRECTORNAME1 from "../../../assets/test/wows/random_wow_5_2000_MovieName2_DirectorName1_0.json";
 import * as RANDOM_WOW_1_2000_MOVIENAME1_DIRECTORNAME1 from "../../../assets/test/wows/random_wow_1_2000_MovieName1_DirectorName1_0.json";
+import {NOT_APPLICABLE} from "../../constants";
 
 describe('RandomWowSearchComponent', () => {
 
@@ -57,8 +58,8 @@ describe('RandomWowSearchComponent', () => {
 
         expect(results).toEqual(5);
         expect(year).toEqual(2000);
-        expect(movieName).toEqual('Movie Name 1');
-        expect(directorName).toEqual('Director Name 1');
+        expect(movieName).toEqual(NOT_APPLICABLE);
+        expect(directorName).toEqual(NOT_APPLICABLE);
       })
     })
 
@@ -71,7 +72,7 @@ describe('RandomWowSearchComponent', () => {
       submitButton.click();
 
       expect(wowHttpServiceSpy.getRandom).toHaveBeenCalledOnceWith(
-        5, 2000, 'Movie Name 1', 'Director Name 1'
+        5, 2000, NOT_APPLICABLE, NOT_APPLICABLE
       );
 
       fixture.ngZone!.run(() => {
@@ -95,7 +96,7 @@ describe('RandomWowSearchComponent', () => {
       submitButton.click();
 
       expect(wowHttpServiceSpy.getRandom).toHaveBeenCalledOnceWith(
-        2, 2000, 'Movie Name 1', 'Director Name 1'
+        2, 2000, NOT_APPLICABLE, NOT_APPLICABLE
       );
 
       fixture.ngZone!.run(() => {
@@ -119,7 +120,7 @@ describe('RandomWowSearchComponent', () => {
       submitButton.click();
 
       expect(wowHttpServiceSpy.getRandom).toHaveBeenCalledOnceWith(
-        5, 1977, 'Movie Name 1', 'Director Name 1'
+        5, 1977, NOT_APPLICABLE, NOT_APPLICABLE
       );
 
       fixture.ngZone!.run(() => {
@@ -143,7 +144,7 @@ describe('RandomWowSearchComponent', () => {
       submitButton.click();
 
       expect(wowHttpServiceSpy.getRandom).toHaveBeenCalledOnceWith(
-        5, 2000, 'Movie Name 2', 'Director Name 1'
+        5, 2000, 'Movie Name 2', NOT_APPLICABLE
       );
 
       fixture.ngZone!.run(() => {
@@ -167,55 +168,7 @@ describe('RandomWowSearchComponent', () => {
       submitButton.click();
 
       expect(wowHttpServiceSpy.getRandom).toHaveBeenCalledOnceWith(
-        5, 2000, 'Movie Name 1', 'Director Name 2'
-      );
-
-      fixture.ngZone!.run(() => {
-        const wowList = component.wows;
-        expect(wowList.length).toEqual(5);
-        for (let i = 0; i < wowList.length; i++) {
-          expect(wowList[i]).toEqual(expectedWowList[i]);
-        }
-      });
-    })
-
-    it('should retrieve/contain the correct Wows when submit button has been clicked, and director name is null', () => {
-      fixture.autoDetectChanges(true);
-      wowHttpServiceSpy.getRandom.and.returnValue(of(RANDOM_WOW_5_2000_MOVIENAME1_DIRECTORNAME1 as unknown as Wow[]));
-      const expectedWowList: Wow[] = RANDOM_WOW_5_2000_MOVIENAME1_DIRECTORNAME1 as unknown as Wow[]
-      const submitButton = nativeElement.querySelector('#submit-button') as HTMLButtonElement;
-
-      fixture.ngZone!.run(() => {
-        component.directorName = null;
-      });
-      submitButton.click();
-
-      expect(wowHttpServiceSpy.getRandom).toHaveBeenCalledOnceWith(
-        5, 2000, 'Movie Name 1', null
-      );
-
-      fixture.ngZone!.run(() => {
-        const wowList = component.wows;
-        expect(wowList.length).toEqual(5);
-        for (let i = 0; i < wowList.length; i++) {
-          expect(wowList[i]).toEqual(expectedWowList[i]);
-        }
-      });
-    })
-
-    it('should retrieve/contain the correct Wows when submit button has been clicked, and movie name is null', () => {
-      fixture.autoDetectChanges(true);
-      wowHttpServiceSpy.getRandom.and.returnValue(of(RANDOM_WOW_5_2000_MOVIENAME2_DIRECTORNAME1 as unknown as Wow[]));
-      const expectedWowList: Wow[] = RANDOM_WOW_5_2000_MOVIENAME2_DIRECTORNAME1 as unknown as Wow[]
-      const submitButton = nativeElement.querySelector('#submit-button') as HTMLButtonElement;
-
-      fixture.ngZone!.run(() => {
-        component.movieName = null;
-      });
-      submitButton.click();
-
-      expect(wowHttpServiceSpy.getRandom).toHaveBeenCalledOnceWith(
-        5, 2000, null, 'Director Name 1'
+        5, 2000, NOT_APPLICABLE, 'Director Name 2'
       );
 
       fixture.ngZone!.run(() => {
@@ -239,7 +192,7 @@ describe('RandomWowSearchComponent', () => {
       submitButton.click();
 
       expect(wowHttpServiceSpy.getRandom).toHaveBeenCalledOnceWith(
-        5, null, 'Movie Name 1', 'Director Name 1'
+        5, null, NOT_APPLICABLE, NOT_APPLICABLE
       );
 
       fixture.ngZone!.run(() => {
@@ -263,7 +216,7 @@ describe('RandomWowSearchComponent', () => {
       submitButton.click();
 
       expect(wowHttpServiceSpy.getRandom).toHaveBeenCalledOnceWith(
-        null, 2000, 'Movie Name 1', 'Director Name 1'
+        null, 2000, NOT_APPLICABLE, NOT_APPLICABLE
       );
 
       fixture.ngZone!.run(() => {
@@ -274,7 +227,5 @@ describe('RandomWowSearchComponent', () => {
         }
       });
     })
-
-
   });
 })
