@@ -33,7 +33,7 @@ export class ThemeService {
         const prefersColorSchemeDark = window.matchMedia("(prefers-color-scheme: dark)");
 
         let themeToApply: Theme;
-        if (savedTheme == null) {
+        if (!savedTheme) {
           themeToApply = prefersColorSchemeDark ? Theme.DARK : Theme.LIGHT;
         } else themeToApply = savedTheme;
 
